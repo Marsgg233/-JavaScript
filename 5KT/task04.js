@@ -1,13 +1,13 @@
 function isFridayToday() {
     const today = new Date(global.Date.now());
-    const dayOfWeek = today.getDay();
+    const dayOfWeek = today.getDay(); // Вс-0, Пн-1, Вт-2, Ср-3, Чт-4, Пт-5, Сб-6  
 
     switch(dayOfWeek) {
-        case 5: //Пятница
+        case 5:
             return "Сегодня пятница!";
-        case 4: //Четверг
+        case 4:
             return "Пятница была вчера";
-        case 6: //Суббота
+        case 6:
             return "Завтра пятница!";
         default:
             const daysToFriday = (5 - dayOfWeek + 7) % 7;
