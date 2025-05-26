@@ -10,13 +10,13 @@ describe('Тестирование функции isFridayToday', () => {
     test('2', () => { //должен выводить "Пятница была вчера" при четверге
         const thursdayDate = new Date('2023-10-05T00:00:00Z');
         global.Date.now = jest.fn(() => thursdayDate.valueOf());
-        expect(isFridayToday()).toBe('Пятница была вчера');
+        expect(isFridayToday()).toBe('Завтра пятница!');
     });
 
     test('3', () => { //должен выводить "Завтра пятница!" при субботу
         const saturdayDate = new Date('2023-10-07T00:00:00Z');
         global.Date.now = jest.fn(() => saturdayDate.valueOf());
-        expect(isFridayToday()).toBe('Завтра пятница!');
+        expect(isFridayToday()).toBe('Пятница была вчера');
     });
 
     test('4', () => { //должен считать количество дней до пятницы
