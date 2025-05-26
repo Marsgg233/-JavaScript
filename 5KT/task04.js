@@ -6,9 +6,9 @@ function isFridayToday() {
         case 5:
             return "Сегодня пятница!";
         case 4:
-            return "Пятница была вчера";
-        case 6:
             return "Завтра пятница!";
+        case 6:
+            return "Пятница была вчера";
         default:
             const daysToFriday = (5 - dayOfWeek + 7) % 7;
             return `Пятница будет через ${daysToFriday} дня`;
