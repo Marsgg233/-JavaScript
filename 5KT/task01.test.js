@@ -1,7 +1,7 @@
 const { formatPhones } = require('./task01');
 
 describe('formatPhones', () => {
-  test('1', () => { //форматирует номера согласно примеру
+  test('1', () => { //форматирует номера
     const input = [
       '590.423.4568',
       '650.124.7234',
