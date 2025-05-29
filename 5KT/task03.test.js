@@ -13,4 +13,11 @@ describe('Тестирование функции kingSaid', () => {
         const result = kingSaid(message);
         expect(result).toBe(expected);
     });
+
+    test('3', () => { // Должен обрабатать пустую строку
+    const message = '';
+    const expected = 'Король сказал: ';
+    const result = kingSaid(message);
+    expect(result).toBe(expected);
+  });
 });
